@@ -59,7 +59,7 @@ def save_text_to_file(text, output_path):
 
 def process_pdfs_in_folder(folder_path):
     paper_id_counter=1
-    output_path = '/Users/shreyasnyu/Documents/projects/cloud/parsed3'
+    output_path = '/Users/siddharthnyu/Documents/projects/cloud/parsed3'
     os.makedirs(output_path, exist_ok=True)
     
     for filename in os.listdir(folder_path):
@@ -90,10 +90,10 @@ def process_pdfs_in_folder(folder_path):
                 print(f"Error processing {filename}: {e}")
 
 # Usage
-folder_path = '/Users/shreyasnyu/Documents/projects/cloud/dataset'
+folder_path = '/Users/siddharthnyu/Documents/projects/cloud/dataset'
 if os.path.exists(folder_path):
     process_pdfs_in_folder(folder_path)
-    metadata_file_path = "/Users/shreyasnyu/Documents/projects/cloud/ResearchLLM/pdf_metadata3.json"  # Adjust the file name/path as needed
+    metadata_file_path = "/Users/siddharthnyu/Documents/projects/cloud/ResearchLLM/pdf_metadata3.json"  # Adjust the file name/path as needed
     try:
         with open(metadata_file_path, "w") as metadata_file:
             json.dump(filename_metadata, metadata_file, indent=4)  # Save with indentation for readability
